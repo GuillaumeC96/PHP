@@ -27,6 +27,8 @@ $requete = $db->query("SELECT * FROM disc JOIN artist ON disc.artist_id=artist.a
 $tableau = $requete->fetchAll(PDO::FETCH_OBJ);
 // on clôt la requête en BDD
 $requete->closeCursor();
+//compter les lignes du tableau
+$nb = "Liste des disques (" . count($tableau) . ")";
 
 
 ?>
@@ -35,43 +37,54 @@ $requete->closeCursor();
 
 <body class="px-5">
 
-
-<div class="row px-3">
-
-    <?php foreach ($tableau as $disc): ?>
-        <div class="col-6 mx-6">
-        
-        <div class="d-flex mx-6 my-2" style="height: 265px;">
-
-            <div>
-                <img class="p-3" style="height: 265px" src="./jaquettes/<?= $disc->disc_picture ?>">
-            </div>
-
-            <div class="p-3" style="height: 265px">
-                <a class="font-weight-bold">
-                        <?= $disc->disc_title ?>
-                    </a><br>
-                    <a class="font-weight-bold">
-                        <?= $disc->artist_name ?>
-                    </a><br>
-                    <a class="font-weight-bold">Label :</a>
-                    <?= $disc->disc_label ?><br>
-                    <a class="font-weight-bold">Year :</a>
-                    <?= $disc->disc_year ?><br>
-                    <a class="font-weight-bold">Genre :</a>
-                    <?= $disc->disc_genre ?><br>
-          
-               
-                    <a href="2c-disc_detail.php?id=<?= $disc->disc_id ?>"
-                        class="btn bg-primary text-white my-4">Détail</a>
-
-               
-            </div>
+    <div class="d-flex mx-6 my-2 justify-content-between">
+        <div>
+            <h1 class="px-5">
+                <?= $nb ?>
+            </h1>
         </div>
-
+        <div>
+            <a href="2d-disc_new.php?>" class="btn bg-primary text-white my-4">Ajouter</a>
         </div>
-    <?php endforeach; ?>
-    
+    </div>
+
+
+    <div class="row px-3">
+
+        <?php foreach ($tableau as $disc): ?>
+            <div class="col-6 mx-6">
+
+                <div class="d-flex mx-6 my-2" style="height: 265px;">
+
+                    <div>
+                        <img class="p-3" style="height: 265px" src="./jaquettes/<?= $disc->disc_picture ?>">
+                    </div>
+
+                    <div class="p-3" style="height: 265px">
+                        <a class="font-weight-bold">
+                            <?= $disc->disc_title ?>
+                        </a><br>
+                        <a class="font-weight-bold">
+                            <?= $disc->artist_name ?>
+                        </a><br>
+                        <a class="font-weight-bold">Label :</a>
+                        <?= $disc->disc_label ?><br>
+                        <a class="font-weight-bold">Year :</a>
+                        <?= $disc->disc_year ?><br>
+                        <a class="font-weight-bold">Genre :</a>
+                        <?= $disc->disc_genre ?><br>
+
+
+                        <a href="2c-disc_detail.php?id=<?= $disc->disc_id ?>"
+                            class="btn bg-primary text-white my-4">Détail</a>
+
+
+                    </div>
+                </div>
+
+            </div>
+        <?php endforeach; ?>
+
     </div>
 
 
