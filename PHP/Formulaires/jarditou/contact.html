@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/img/images/Logo_Afpa.ico">
+  <title>Contact</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <header>
+    <!-- Rajouter le paramtre "title" à chaque lien et image -->
+
+    <div id="leflex1_contact">
+      <div id="DIVlogo_contact">
+        <img title="Logo" id="logo1_contact" src="assets/img/images/jarditou_logo.jpg" alt="Logo">
+      </div>
+      <div id="DIVtxt_contact">
+        <p id="txtheader_contact">Tout le jardin</p>
+      </div>
+    </div>
+  </header>
+  <nav class="navigation">
+    <ul class="CENTERnav">
+      <li><a class="NAV" href="index.html" title="Accueil">Accueil</a></li>
+      <li><a class="NAV" href="tableau.html" title="Tableau">Tableau</a></li>
+      <li><a class="NAV" href="contact.html" title="Contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <img title="pub" id="promo_contact" class="fit-picture" src="assets/img/images/promotion.jpg" alt="Publicité">
+
+  <div id="leflex2_contact">
+    <div id="DIVsection1_contact">
+      <section>
+
+        <h1>Contact</h1>
+        <hr class="ligne">
+        <br>
+        <a>* Ces zones sont obligatoires</a>
+
+        <br><br>
+
+        <form action="monscript.php" method="get" id="formulaire_contact">
+
+          <fieldset>
+            <legend>
+              <h2>Coordonnées</h2>
+            </legend>
+            <label for="nom">Votre nom* :</label><input name="nom" id="nom" type="text"
+              title="Entrez votre nom (que des caractères entre a et z)">
+            <br>
+            <span id="msgnom" class="champ1"></span>
+
+            <br>
+
+
+            <label for="prenom">Votre prénom* :</label><input name="prenom" id="prenom" type="text" required
+              title="Entrez votre prénom (que des caractères entre a et z)">
+            <br>
+            <span id="msgprenom" class="champ1"></span>
+
+            <br>
+
+            <label for="sexe">Sexe* :</label>
+            <input name="Fsexe[]" id="fem" type="radio" value="Féminin"> Féminin
+            <input name="Fsexe[]" id="hom" type="radio" value="Masculin"> Masculin
+            <br>
+            <span id="msgsexe" class="champ1"></span>
+
+            <br>
+
+
+            <label for="date">Date de naissance* :</label><input name="naissance" id="date" type="date">
+            <br>
+            <span id="msgdate" class="champ1"></span>
+
+            <br>
+
+            <label for="postal">Code postal* :</label><input name="postal" id="postal" type="text" maxlength="5"
+              required title="Entrez les 5 chiffres de votre code postal">
+            <br>
+            <span id="msgpostal" class="champ1"></span>
+
+            <br>
+
+            <label for="adresse">Adresse :</label><input name="adresse" id="adresse" type="text" required
+              title="Entrez votre adresse">
+            <br>
+            <span id="msgadresse" class="champ1"></span>
+
+            <br>
+
+            <label for="ville">Ville :</label><input name="ville" id="ville" type="text" required
+              title="Entrez votre Ville">
+            <br>
+            <span id="msgville" class="champ1"></span>
+
+            <br>
+            <label for="email">Email* :</label><input name="email" id="email" type="text" required
+              title="Entrez votre e-mail">
+            <br>
+            <span id="msgemail" class="champ1"></span>
+
+            <br>
+            <label for="controle">Vérifier l'e-mail* :</label><input name="controle" id="controle" type="text" required
+              title="Vérifier votre e-mail">
+            <br>
+            <span id="msgcontrole" class="champ1"></span>
+
+          </fieldset>
+
+          <br><br>
+
+          <fieldset>
+            
+
+            <legend>Votre demande</legend>
+
+            <label for="sujet">Sujet* : </label>
+            <select id="sujet" name="sujet">
+              <option value="Veuillez sélectionner un sujet" selected disabled>Sélectionner un sujet</option>
+              <option value="Mes commandes">Mes commandes</option>
+              <option value="Question sur un produit">Question sur un produit</option>
+              <option value="Réclamation">Réclamation</option>
+              <option value="Autres">Autres</option>
+            </select>
+            <br>
+            <span id="msgsujet" class="champ1" class="champ1"></span><br>
+
+            <label for="question">Votre question* : </label><br>
+            <textarea name="question" id="question" rows="2" cols="50"></textarea>
+            <br>
+            <span id="msgquestion" class="champ1"></span>
+
+            <br>
+          </fieldset>
+
+          <br>
+
+          <input name="case" type="checkbox" id="check"> * J'accepte le traitement informatique de
+          ce formulaire
+          <br>
+          <span id="msgcheck" class="champ1"></span> 
+
+          <br><br>
+
+          <input id="submit" name="submit" type="submit" value="Envoyer">
+          <input name="reset" type="reset" value="Annuler">
+
+
+        </form>
+
+      </section>
+    </div>
+
+    <div id="DIVaside1">
+      <aside id="aside1"><a id="special">[COLONNE DROITE]</a></aside>
+    </div>
+  </div>
+
+  <footer class="navigation">
+    <ul class="CENTERnav">
+      <li><a class="NAV" href="mentions_legales.html" title="Mentions légales">Mentions légales</a></li>
+      <li><a class="NAV" href="horaires.html" title="Horaires">Horaires</a></li>
+      <li><a class="NAV" href="plan_du_site.html" title="Plan du site">Plan du site</a></li>
+    </ul>
+  </footer>
+
+
+  <script src="js/Javascript.js"></script>
+
+</body>
+
+</html>
