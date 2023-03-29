@@ -1,0 +1,150 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+}
+
+h1{ font-size: 18px;}
+    h2,td,.NAV{ font-size: 16px;}
+    p,a{ font-size: 14px;}
+
+table,th,td{
+    padding: 10px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+#txtheader_index, #txtheader_tableau, #txtheader_contact {
+    margin-top: 40px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.navigation {
+    background-color: black;
+    font-size: 100%;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.navigation ul li {
+    list-style: none;
+    margin-right: 10px;
+}
+
+.navigation a {
+    display: block;
+    color: white;
+    padding: 10px 0px 10px 0px;
+}
+
+#logo1_index, #logo1_tableau, #logo1_contact {
+    width: 300px;
+    margin: 10px;
+}
+
+#leflex1_index, #leflex1_tableau, #leflex1_contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#DIVlogo_index, #DIVlogo_tableau, #DIVlogo_contact {
+    width: 50%;
+}
+
+.ligne {
+    color: whitesmoke;
+    width: 100%;
+}
+
+#promo_index, #promo_tableau, #promo_contact {
+    width: 100%;
+}
+
+#DIVsection1_index, #DIVsection1_tableau, #DIVsection1_contact {
+    width: 80%;
+}
+
+#DIVaside1_index, #DIVaside1_tableau, #DIVaside1_contact {
+    background-color: grey;
+    width: 20%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#aside1_index, #aside1_tableau, #aside1_contact {
+    height: 100%;
+}
+
+#special_index, #special_tableau, #special_contact {
+    margin-left: 0px;
+}
+
+#leflex2_index, #leflex2_tableau, #leflex2_contact {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a,
+h1,
+h2,
+p,
+li,
+form,
+legend,
+title,
+select,
+textarea,
+input,
+label,
+table,
+.champ1 {
+    margin: 10px;
+}
+
+.champ1{
+    color : red;
+    border-bottom: 10px;
+}
+
+/*responsive*/
+
+@media screen and (max-width: 768px) {
+
+    #DIVaside1_index, #DIVaside1_tableau, #DIVaside1_contact {
+        display: none;
+    }
+
+    #DIVsection1_index, #DIVsection1_tableau, #DIVsection1_contact {
+        width: 100%;
+    }
+
+    #txtheader_index, #txtheader_tableau, #txtheader_contact {
+        display: none;
+    }
+
+    .CENTERnav,
+    h1 {
+        justify-content: center;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation ul li {
+        list-style: none;
+        margin: 0px;
+    }
+
+    h1{ font-size: 16px;}
+    h2,td,.NAV{ font-size: 14px;}
+    p,a{ font-size: 12px;}
+
+
+
+}
